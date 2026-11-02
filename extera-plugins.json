@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "name": "exteraGram Test Plugins",
+  "author": "@exteraDev",
+  "plugins": [
+    {
+      "id": "repo_counter",
+      "name": "Repo Counter",
+      "description": "Counts how many times the plugin was loaded.",
+      "author": "@exteraDev",
+      "version": "1.1.0",
+      "icon": "exteraPlugins/2",
+      "app_version": ">=12.5.1",
+      "category": "tools",
+      "file": "plugins/repo_counter/repo_counter.plugin",
+      "sha256": "78974c62fb137d41f99dda6bd42988a4c7aaec6175056751dfc27e4533f28128",
+      "size": 860,
+      "updated_at": "2026-11-02T09:30:32Z"
+    },
+    {
+      "id": "repo_hello",
+      "name": "Repo Hello",
+      "description": "Shows a bulletin when enabled. Installed from a **Git repository**.",
+      "author": "@exteraDev",
+      "version": "1.0.0",
+      "icon": "exteraPlugins/1",
+      "app_version": ">=12.5.1",
+      "category": [
+        "tools",
+        "fun"
+      ],
+      "file": "plugins/repo_hello/repo_hello.plugin",
+      "sha256": "6f7909307c9f7d20285d6865f856ee1217c727c914bd6c9b2ca99ae5cfe523af",
+      "size": 482,
+      "updated_at": "2026-11-02T09:30:32Z"
+    }
+  ]
+}

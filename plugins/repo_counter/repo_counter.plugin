@@ -1,0 +1,28 @@
+from typing import Any, List
+
+from base_plugin import BasePlugin
+from ui.bulletin import BulletinHelper
+from ui.settings import Header, Switch
+
+__id__ = "repo_counter"
+__name__ = "Repo Counter"
+__description__ = "Counts how many times the plugin was loaded."
+__author__ = "@exteraDev"
+__version__ = "1.1.0"
+__icon__ = "exteraPlugins/2"
+__app_version__ = ">=12.5.1"
+__category__ = "tools"
+
+
+class RepoCounterPlugin(BasePlugin):
+    def on_plugin_load(self):
+        count = self.get_setting("count", 0) + 1
+        self.set_setting("count", count)
+        if self.get_setting("notify", True):
+            BulletinHelper.show_info(f"Repo Counter loaded {count} times")
+
+    def create_settings(self) -> List[Any]:
+        return [
+            Header(text="Repo Counter"),
+            Switch(key="notify", text="Show a bulletin on load", default=True),
+        ]
